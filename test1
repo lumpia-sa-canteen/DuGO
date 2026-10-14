@@ -19,3 +19,18 @@ fun FacebookButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
 }
 
 // log in button ni jedrick for fb
+
+
+    onGoogle: () -> Unit = {},
+    onFacebook: () -> Unit = {},      // i butang ni after sa onGoogle
+
+// nya ilisdi ang google button og in ani 
+
+            GoogleButton(onGoogle)
+            Spacer(Modifier.height(12.dp))
+            FacebookButton(onFacebook)
+
+// kani i add ni sa mainactivity ubos sa "onGoogle ="
+
+                        onFacebook = { Toast.makeText(this, "Facebook sign-in", Toast.LENGTH_SHORT).show() },
+
