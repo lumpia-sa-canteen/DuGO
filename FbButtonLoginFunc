@@ -1,0 +1,36 @@
+@Composable
+fun FacebookButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
+    OutlinedButton(
+        onClick = onClick,
+        modifier = modifier.fillMaxWidth().height(52.dp),
+        shape = RoundedCornerShape(26.dp),
+        border = BorderStroke(1.dp, Color(0xFFF28B93)),
+        colors = ButtonDefaults.outlinedButtonColors(containerColor = Color.White, contentColor = TextDark)
+    ) {
+        Box(
+            modifier = Modifier.size(20.dp).clip(CircleShape).background(Color(0xFF1877F2)),
+            contentAlignment = Alignment.Center
+        ) {
+            Text("f", color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.Bold)
+        }
+        Spacer(Modifier.width(10.dp))
+        Text("Continue with Facebook", fontSize = 13.sp, fontWeight = FontWeight.Bold)
+    }
+}
+
+// log in button ni jedrick for fb
+
+
+    onGoogle: () -> Unit = {},
+    onFacebook: () -> Unit = {},      // i butang ni after sa onGoogle
+
+// nya ilisdi ang google button og in ani 
+
+            GoogleButton(onGoogle)
+            Spacer(Modifier.height(12.dp))
+            FacebookButton(onFacebook)
+
+// kani i add ni sa mainactivity ubos sa "onGoogle ="
+
+                        onFacebook = { Toast.makeText(this, "Facebook sign-in", Toast.LENGTH_SHORT).show() },
+
